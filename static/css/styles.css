@@ -70,17 +70,42 @@
 .b1 {
     display: flex;
     justify-content: center;
-    font-family: "Book Antiqua";
-    font-size: 35px;
-    border-radius: 50%;
-
-
+    font-size: 20px;
 }
-.sneg {
-    height: 200px;
-    width: 250px;
-}
+
 .but {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.logo_lower {
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.floating-button {
+  text-decoration: none;
+  display: inline-block;
+  width: 300px;
+  height: 100px;
+  line-height: 45px;
+  border-radius: 55px;
+  margin: 10px 20px;
+  font-family: "Comic Sans MS";
+  font-size: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #ffffff;
+  background: rgba(15, 222, 227, 0.68);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+  transition: .3s;
+}
+.floating-button:hover {
+  background: #e0e717;
+  box-shadow: 0 15px 20px rgb(213, 6, 35);
+  color: rgba(55, 225, 17, 0.93);
+  transform: translateY(-7px);
 }

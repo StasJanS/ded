@@ -17,14 +17,17 @@
     </div>
     <h1 class="time">До НОВОГО ГОДА осталось: <script src="//megatimer.ru/get/1cf53af12e500b57661f5ee1c3956614.js"></script></h1>
         <div class="but">
-            <a class="b1" href="#"><img class="sneg" src="{% static 'img/92.png' %}" alt="">ГЛАВНАЯ</a>
-            <a class="b1" href="#">История <br>праздника</a>
-            <a class="b1" href="#">Письмо Деду Морозу</a>
-            <a class="b1" href="#">Галерея</a>
-            <a class="b1" href="#">Разное</a>
+            <button class="floating-button"><a class="b1" href="#">Главная</a></button>
+            <button class="floating-button"><a class="b1" href="#">Письмо Дедушке Морозу</a></button>
+            <button class="floating-button"><a class="b1" href="#">Интересные факты</a></button>
+            <button class="floating-button"><a class="b1" href="#">Галерея</a></button>
+            <button class="floating-button"><a class="b1" href="#">Заказать</a></button>
+            <button class="floating-button"><a class="b1" href="#">Контакты</a></button>
 
         </div>
     <h1>{% block header %}!!!!{% endblock header %}</h1>
     <div>{% block content %}{% endblock content %}</div>
+    <br><img class="logo_lower" src="{% static 'img/11.png' %}" alt="">
 </body>
+
 </html>
