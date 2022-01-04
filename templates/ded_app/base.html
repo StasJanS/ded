@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Главная</title>
+
+</head>
+<body style="background-image:url({% static 'img/fon1.jpg' %});background-size: 100%;">
+    <div class="header" style="background-image:url({% static 'img/zim21.jpg'%});background-size: 100%">
+        <img class="LOGO" src="{% static 'img/13.gif' %}" alt="">
+        <h1 class="zagolovok"> В гостях у Деда Мороза </h1>
+        <div class="info"><p class="mob"><span>+375292827882</span></p>
+            <p class="social"><a href="https://www.instagram.com/ded_morozzz_minsk/?utm_medium=copy_link"><img src="{% static 'img/inst.jpg' %}" alt=""></a></p>
+            </div>
+    </div>
+    <h1 class="time">До НОВОГО ГОДА осталось: <script src="//megatimer.ru/get/1cf53af12e500b57661f5ee1c3956614.js"></script></h1>
+        <div class="but">
+            <a class="b1" href="#"><img class="sneg" src="{% static 'img/92.png' %}" alt="">ГЛАВНАЯ</a>
+            <a class="b1" href="#">История <br>праздника</a>
+            <a class="b1" href="#">Письмо Деду Морозу</a>
+            <a class="b1" href="#">Галерея</a>
+            <a class="b1" href="#">Разное</a>
+
+        </div>
+    <h1>{% block header %}!!!!{% endblock header %}</h1>
+    <div>{% block content %}{% endblock content %}</div>
+</body>
+</html>

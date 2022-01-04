@@ -8,3 +8,8 @@ menu = [{'boss': 'Главная', 'url_name': 'index'},
         {'boss': 'Заказать на дом', 'url_name': 'order'},
         {'boss': 'Контакты', 'url_name': 'contact'},
         ]
+
+
+def index(request):
+    context = {'menu': menu}
+    return render(request, 'ded_app/base.html', context)
