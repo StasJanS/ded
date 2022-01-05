@@ -51,7 +51,7 @@
     justify-content:space-around;
     align-items: center;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 55px;
     color: #16b621;
     font-family: "Monotype Corsiva"
 
@@ -81,7 +81,7 @@
 
 .logo_lower {
     display: flex;
-    align-items: flex-end;
+    justify-content: center;
 
 }
 
@@ -113,4 +113,30 @@
 .meteo {
     height: 300px;
     width: 300px;
+}
+.stih {
+    display: flex;
+    justify-content: space-around;
+    font-family: "Monotype Corsiva";
+    font-size: 40px;
+    font-weight: 800;
+    color: blue;
+}
+.stih1 {
+    margin-left: 20px;
+    text-shadow: 5px 10px 20px #ff002f;
+}
+.stih2 {
+    padding-left: 30px;
+    text-shadow: 5px 10px 20px #2bb026;
+}
+.stih3 {
+    margin-right: 20px;
+    text-shadow: 5px 10px 20px gold;
+}
+.scroll {
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    font-size: 50px;
+    color: coral;
+    text-shadow: 5px 10px 20px gold;
 }
