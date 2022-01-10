@@ -17,7 +17,6 @@ class Foto(models.Model):
     img = models.ImageField(upload_to='image/media/')
     jears = models.ForeignKey('Jear', on_delete=models.CASCADE, verbose_name='Год')
 
-
     class Meta:
         verbose_name = 'Фото'
         verbose_name_plural = 'Фото'

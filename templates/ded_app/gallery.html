@@ -1,0 +1,8 @@
+{% extends 'ded_app/base.html' %}
+
+{% block content %}
+    {% for i in foto %}
+        <p class="jear_foto"><a href="{% url 'gallery_jear' i.id %}">Встреча {{ i.number }} года</a></p>
+    {% endfor %}
+
+{% endblock content %}

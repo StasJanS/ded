@@ -102,28 +102,33 @@
     <button class="floating-button"><a class="b1" href="{% url 'index' %}">Главная</a></button>
     <button class="floating-button"><a class="b1" href="#">Письмо Дедушке Морозу</a></button>
     <button class="floating-button"><a class="b1" href="#">Интересные факты</a></button>
-    <button class="floating-button"><a class="b1" href="#">Галерея</a></button>
+    <button class="floating-button"><a class="b1" href="{% url 'gallery' %}">Галерея</a></button>
     <button class="floating-button"><a class="b1" href="#">Заказать</a></button>
     <button class="floating-button"><a class="b1" href="#">Контакты</a></button>
 
 </div>
 
-<h1>{% block header %}<marquee class="scroll" scrollamount="5">С новым 2022 годом и Рождеством!     Мира здоровья и любви в Ваши дома! Пусть будут столы полны явств, а сундуки богатств! УРА!!!</marquee>{% endblock header %}</h1>
+<h1>{% block header %}
+    <marquee class="scroll" scrollamount="5">С новым 2022 годом и Рождеством! Мира здоровья и любви в Ваши дома! Пусть
+        будут столы полны явств, а сундуки богатств! УРА!!!
+    </marquee>{% endblock header %}</h1>
 {% block content %}
-    <div class="stih"><div class="stih1"><br>Пусть елка с яркою звездою
-    <br>В ваш дом удачу принесет,
-    <br>Любовь и крепкое здоровье.
-    <br>Пусть год вам сказочно везет.
-    </div>
-    <div class="stih2"><br>Пусть в Новый год случится чудо —
-    <br>В душе зажгутся огоньки
-    <br>И целый год у вас не будет
-    <br>Ни огорчений, ни тоски.
-    </div>
-    <div class="stih3"><br>Под бой курантов загадайте
-    <br>Свои заветные мечты,
-    <br>И в дом свой поскорей впускайте —
-    <br>Год радости и доброты.</div>
+    <div class="stih">
+        <div class="stih1"><br>Пусть елка с яркою звездою
+            <br>В ваш дом удачу принесет,
+            <br>Любовь и крепкое здоровье.
+            <br>Пусть год вам сказочно везет.
+        </div>
+        <div class="stih2"><br>Пусть в Новый год случится чудо —
+            <br>В душе зажгутся огоньки
+            <br>И целый год у вас не будет
+            <br>Ни огорчений, ни тоски.
+        </div>
+        <div class="stih3"><br>Под бой курантов загадайте
+            <br>Свои заветные мечты,
+            <br>И в дом свой поскорей впускайте —
+            <br>Год радости и доброты.
+        </div>
     </div>
     <br>
     <div class="logo_lower"><img src="{% static 'img/13.png' %}" alt=""></div>
