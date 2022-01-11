@@ -140,6 +140,13 @@
     color: coral;
     text-shadow: 5px 10px 20px gold;
 }
+
+.jear_foto {
+    display: flex;
+    justify-content: center;
+    font-family: "Arial Black";
+    font-size: 50px;
+}
 .foto_gallery {
     display: flex;
     justify-content: space-around;
