@@ -144,10 +144,11 @@
 .jear_foto {
     display: flex;
     justify-content: center;
-    font-family: "Arial Black";
-    font-size: 50px;
+    font-family: "Book Antiqua";
+    color: #e22b2b;
+    font-size: 75px;
 }
 .foto_gallery {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
 }

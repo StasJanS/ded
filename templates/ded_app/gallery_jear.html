@@ -5,6 +5,11 @@
         img.zoom {
             -moz-user-select: none;
             user-select: none;
+            margin: auto;
+            padding: 5px;
+            border-radius: 20%;
+            border-style: ridge;
+            border: #ff002f;
         }
 
         img.zoom:hover {
@@ -29,12 +34,15 @@
         }
 
         /* не идеально: transition-property не поддерживает свойство position. В результате, если переключить вкладку браузера, то картинка становится вновь маленькой. */
-    </style>
+    </style><br>
+        {% for i in z %}
+        <h1 class="jear_foto"> Вот так мы встречали {{ i.jears }} год:</h1>
+        {% endfor %}
     <div class="foto_gallery">
     {% for i in foto %}
         {#        <h1>Вот так мы встречали {{ i.jears }} год:</h1>#}
         {% if i.img %}
-            <img class="zoom" width="250"  src="{{ i.img.url }}" alt="СКОРО БУДЕТ ФОТО">
+            <img class="zoom" width="240"  src="{{ i.img.url }}" alt="СКОРО БУДЕТ ФОТО">
         {% endif %}
     {% endfor %}
     </div>

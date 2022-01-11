@@ -25,6 +25,6 @@ def gallery(request):
 
 def gallery_jear(request, jears):
     foto = Foto.objects.filter(jears=jears)
-    print(foto)
-    context = {'menu': menu, 'foto': foto}
+    z = Foto.objects.filter(id=jears)
+    context = {'menu': menu, 'foto': foto, 'z':z}
     return render(request, 'ded_app/gallery_jear.html', context)
