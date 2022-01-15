@@ -20,3 +20,16 @@ class Foto(models.Model):
     class Meta:
         verbose_name = 'Фото'
         verbose_name_plural = 'Фото'
+
+
+class Fakt(models.Model):
+    title = models.CharField(max_length=100, verbose_name='Заголовок')
+    text = models.TextField(verbose_name='Текст')
+    img = models.ImageField(upload_to='image/media/')
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Факт'
+        verbose_name_plural = 'Факты'
