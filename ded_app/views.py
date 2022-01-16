@@ -34,3 +34,9 @@ def fakt(request):
     fakt = Fakt.objects.all()
     context = {'menu': menu, 'fakt': fakt}
     return render(request, 'ded_app/fakt.html', context)
+
+
+def fakt_detail(request, title):
+    fakt_detail = Fakt.objects.filter(title=title)
+    context = {'menu': menu, 'fakt_detail': fakt_detail}
+    return render(request, 'ded_app/fakt_detail.html', context)

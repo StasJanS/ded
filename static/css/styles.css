@@ -152,3 +152,34 @@
     display: flex;
     flex-wrap: wrap;
 }
+.fakt {
+    display: flex;
+    justify-content: center;
+    font-family: "Monotype Corsiva";
+    font-size: 75px;
+}
+.fakt_text {
+    font-family: Monospaced;
+    font-size: 40px;
+    margin-left: 20px;
+    margin-right: 60px;
+    font-weight: 400;
+
+}
+.fakt_detail {
+    display: flex;
+    justify-content:space-between;
+    margin: auto;
+    background: rgba(230, 238, 2, 0.27);
+}
+.fakt_zag {
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+    font-weight: 700;
+    color: #3a00cc;
+    text-shadow: 5px 10px 20px #2fff00;
+}
+.fakt_img {
+    margin: auto;
+}
