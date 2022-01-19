@@ -1,8 +1,10 @@
 {% extends 'ded_app/base.html' %}
-
+{% load static %}
 {% block content %}
     {% for i in fakt %}
-        <p class="fakt"><a href="{% url 'fakt_detail' i.title %}">{{ i.title }}</a></p>
+        <p class="fakt"><img width="150" src="{% static 'img/91.png' %}" alt="">&nbsp<a
+                href="{% url 'fakt_detail' i.title %}">{{ i.title }}</a>&nbsp<img width="150" src="{% static 'img/91.png' %}"
+                                                                             alt=""></p>
     {% endfor %}
 
 {% endblock content %}
