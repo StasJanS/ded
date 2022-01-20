@@ -73,12 +73,10 @@
 }
 
 .info {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-family: "Comic Sans MS";
+    font-family: "Monotype Corsiva";
     color: #e4ee07;
-    font-size: 30px;
+    font-size: 40px;
+    font-weight: 700;
 }
 .b1 {
     display: flex;
