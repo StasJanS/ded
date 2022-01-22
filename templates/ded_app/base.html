@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <title>Главная</title>
+    <title>{{ boss }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
@@ -14,7 +14,9 @@
     <h1 class="zagolovok"> В гостях у Деда Мороза </h1>
     <div class="container">
         <img width="400" src="{% static 'img/6.png' %}" alt="">
-        <div class="centered"><a class="info" href="#">Войти</a></div>
+        <div class="centered"><a class="info" href="{% url 'login' %}">Войти/</a><a class="info"
+                                                                                    href="{% url 'register' %}">Регистрация</a>
+        </div>
     </div>
 
 </div>

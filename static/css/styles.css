@@ -65,7 +65,8 @@
     position: relative;
     text-align: center;
     color: white;
-}.centered {
+}
+.centered {
     position: absolute;
     top: 50%;
     left: 35%;
@@ -75,7 +76,7 @@
 .info {
     font-family: "Monotype Corsiva";
     color: #e4ee07;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 700;
 }
 .b1 {
