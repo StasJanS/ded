@@ -78,3 +78,7 @@ def fakt_detail(request, title):
     fakt_detail = Fakt.objects.filter(title=title)
     context = {'menu': menu, 'fakt_detail': fakt_detail, 'boss': title}
     return render(request, 'ded_app/fakt_detail.html', context)
+
+
+def letter(request):
+    return render(request, 'ded_app/letter.html')

@@ -1,0 +1,11 @@
+{% extends 'ded_app/base.html' %}
+
+{% load static %}
+
+{% block content %}
+    {% if request.user.is_authenticated %}
+        <img class="letter_img" width="1500" src="{% static 'img/1.png' %}" alt="">
+    {% else %}
+        <h1>Что бы написать письмо Дедушке Морозу, войдите или зарегистрируйтесь на нашем сайте!</h1>
+    {% endif %}
+{% endblock content %}
