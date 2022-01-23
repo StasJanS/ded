@@ -1,9 +1,11 @@
+from django.contrib.auth import login, logout
 from django.shortcuts import render, redirect
 
 # Create your views here.
+from .forms import UserRegisterForm, UserLoginForm
 from .models import Foto, Jear, Fakt
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib import  messages
+from django.contrib import messages
 
 menu = [{'boss': 'Главная', 'url_name': 'index'},
         {'boss': 'Письмо Дедушке Морозу', 'url_name': 'letter'},
@@ -21,21 +23,36 @@ def index(request):
 
 def register(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = UserRegisterForm(request.POST)
         if form.is_valid():
-            form.save()
+            user = form.save()
+            login(request, user)
             messages.success(request, 'Вы успешно зарегистрированы')
-            return redirect('login')
+            return redirect('index')
         else:
             messages.error(request, 'Ошибка регстрации - Метелица закружила-завела!')
     else:
-        form = UserCreationForm()
+        form = UserRegisterForm()
     context = {'form': form}
     return render(request, 'ded_app/register.html', context)
 
 
-def login(request):
-    return render(request, 'ded_app/login.html')
+def user_login(request):
+    if request.method == 'POST':
+        form = UserLoginForm(data=request.POST)
+        if form.is_valid():
+            user = form.get_user()
+            login(request, user)
+            return redirect('index')
+    else:
+        form = UserLoginForm()
+    context = {'form': form}
+    return render(request, 'ded_app/login.html', context)
+
+
+def user_logout(request):
+    logout(request)
+    return redirect('login')
 
 
 def gallery(request):

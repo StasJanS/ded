@@ -1,13 +1,13 @@
 {% extends 'ded_app/base.html' %}
 
 {% block content %}
+    <h1 class="register1">Регистрация</h1>
+    <div class="register">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="register" type="submit">Регистрация</button>
 
-    <h1>Регистрация</h1>
-    <form action="" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Регистрация</button>
-
-    </form>
-
+        </form>
+    </div>
 {% endblock content %}

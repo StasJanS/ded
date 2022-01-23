@@ -14,9 +14,15 @@
     <h1 class="zagolovok"> В гостях у Деда Мороза </h1>
     <div class="container">
         <img width="400" src="{% static 'img/6.png' %}" alt="">
-        <div class="centered"><a class="info" href="{% url 'login' %}">Войти/</a><a class="info"
-                                                                                    href="{% url 'register' %}">Регистрация</a>
+        <div class="centered">
+            {% if request.user.is_authenticated %}
+                <div class="info">{{ user.username }}/ <a class="info" href="{% url 'logout' %}">Выход</a></div>
+            {% else %}
+                <a class="info" href="{% url 'login' %}">Войти/</a><a class="info"
+                                                                      href="{% url 'register' %}">Регистрация</a>
+            {% endif %}
         </div>
+
     </div>
 
 </div>
@@ -108,7 +114,6 @@
     <button class="floating-button"><a class="b1" href="{% url 'gallery' %}">Галерея</a></button>
     <button class="floating-button"><a class="b1" href="#">Заказать</a></button>
     <button class="floating-button"><a class="b1" href="#">Контакты</a></button>
-
 </div>
 
 <h1>{% block header %}
@@ -139,5 +144,15 @@
 {% endblock content %}
 <br>
 </body>
-
+<div id="footer">
+    <img width="100%" src="{% static 'img/131.png' %}" alt="">
+    <div style="background-image:url({% static 'img/zim20.jpg' %});background-size: 100%;">
+        <div class="footer">©2022 Частичное или полное копирование информации с данного сайта для распространения на
+            других ресурсах, в том числе и бумажных, строго запрещено. Все тексты и изображения являются собственностью
+            сайта.
+        </div>
+        <div class="footer"><a href="#">Политика конфиденциальности</a>|<a href="#">Пользовательское соглашение</a>
+        </div>
+    </div>
+</div>
 </html>

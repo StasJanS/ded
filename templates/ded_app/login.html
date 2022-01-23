@@ -1,6 +1,13 @@
 {% extends 'ded_app/base.html' %}
 
 {% block content %}
-    <h1>Войти</h1>
+    <h1 class="register1">Войти</h1>
+    <div class="register">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="register">Войти</button>
+        </form>
+    </div>
 
 {% endblock content %}
