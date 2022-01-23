@@ -79,6 +79,18 @@
     left: 35%;
     transform: translate(-50%, -50%);
 }
+.centered_1 {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.centered_2 {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 .info {
     font-family: "Monotype Corsiva";
@@ -223,3 +235,6 @@
     justify-content: center;
     margin: auto;
 }
+
+/*-----------------------------------*/
+

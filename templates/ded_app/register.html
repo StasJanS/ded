@@ -1,13 +1,23 @@
 {% extends 'ded_app/base.html' %}
 
-{% block content %}
-    <h1 class="register1">Регистрация</h1>
-    <div class="register">
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button class="register" type="submit">Регистрация</button>
+{% load static %}
 
-        </form>
+{% block content %}
+    <div class="container">
+        <img width="900" src="{% static 'img/129.png' %}" alt="">
+        <div class="centered_2">
+            <h1 class="register1">Регистрация</h1>
+            <div class="register">
+                <form method="post">
+                    {% csrf_token %}
+                    <table>
+                        {{ form.as_table }}
+                    </table>
+                    <br>
+                    <button class="register">Зарегистрировать</button>
+                </form>
+            </div>
+        </div>
     </div>
+
 {% endblock content %}
