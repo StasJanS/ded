@@ -6,7 +6,7 @@
     <div class="container">
         <img width="900" src="{% static 'img/130.png' %}" alt="">
         <div class="centered_1">
-            <h1 class="register1">Войти</h1>
+            <h1 class="register1">Вход</h1>
             <div class="register">
                 <form method="post">
                     {% csrf_token %}
@@ -14,7 +14,7 @@
                         {{ form.as_table }}
                     </table>
                     <br>
-                    <button class="register">Войти</button>
+                    <button class="register">Вход</button>
                 </form>
             </div>
         </div>
