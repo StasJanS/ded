@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
     {% for i in fakt_detail %}
-        <p class="fakt_zag">{{ i.title }}</p><br>
+        <p class="fakt_zag">{{ i.title }}</p>
         <div class="fakt_detail" >
             {% if i.img %}
                 <img class="fakt_img" width="500" src="{{ i.img.url }}" alt="СКОРО БУДЕТ ФОТО">
